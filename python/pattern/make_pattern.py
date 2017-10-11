@@ -12,7 +12,6 @@ def make_image(masksize, filename):
     screen = (picturesize, picturesize)
 
     img = Image.new('RGB', screen, (0xff,0xff,0xff))
-
     pix = img.load()
 
     for i in range(2,picturesize,masksize-1):

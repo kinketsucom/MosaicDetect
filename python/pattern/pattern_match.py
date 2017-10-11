@@ -20,7 +20,7 @@ if len(args) != 2:
 img_rgb = cv2.imread(args[1])
 
 img_gray = cv2.cvtColor(img_rgb, cv2.COLOR_BGR2GRAY) #グレースケールに
-img_gray = cv2.Canny(img_gray,10,20) #エッジ検出
+img_gray = cv2.Canny(img_gray,20,500) #エッジ検出
 img_gray = 255-img_gray #白黒反転
 img_gray = cv2.GaussianBlur(img_gray,(3,3),0) #少しぼかす
 
